@@ -3,7 +3,7 @@ rm(list=ls())
 library(purrr);  library(ggplot2); library(dplyr)
 library(plotly); library(tibble); library(scales)
 
-pre_distribution_data = read.csv('C:\\Users\\Ianm9\\OneDrive\\Desktop\\Workings\\Simulation_CSV_Files\\Visualization_Files\\Training_Data_Distribution_1.csv',
+pre_distribution_data = read.csv('Training_Data_Distribution_1.csv',
                           header = T, fileEncoding = "UTF-8-BOM")
 attach(pre_distribution_data);
 #View(pre_distribution_data);
@@ -51,8 +51,8 @@ dist_plot = ggplot(data_df, aes(x = Time,
              size=c(1.25, 1, 1))
 dist_plot
 
-ggsave('C:\\Users\\Ianm9\\OneDrive\\Desktop\\Workings\\Simulation_CSV_Files\\Training_Data_Category_Distribution_Graph.pdf')
-ggsave('C:\\Users\\Ianm9\\OneDrive\\Desktop\\Workings\\Simulation_CSV_Files\\Training_Data_Category_Distribution_Graph.png')
+ggsave('Training_Data_Category_Distribution_Graph.pdf')
+ggsave('Training_Data_Category_Distribution_Graph.png')
 
 # Post Minority Class Upsampling
 
@@ -61,7 +61,7 @@ rm(list=ls())
 library(purrr);  library(ggplot2); library(dplyr)
 library(plotly); library(tibble); library(scales)
 
-post_distribution_data = read.csv('C:\\Users\\Ianm9\\OneDrive\\Desktop\\Workings\\Class_Imbalance_Files\\Upsampled_Combined_Data.csv',
+post_distribution_data = read.csv('Upsampled_Combined_Data.csv',
                                  header = T, fileEncoding = "UTF-8-BOM")
 attach(post_distribution_data);
 #View(post_distribution_data);
@@ -109,8 +109,8 @@ upsampled_dist_plot = ggplot(upsampled_data_df, aes(x = Time,
              size=c(1.25, 1, 1))
 upsampled_dist_plot
 
-ggsave('C:\\Users\\Ianm9\\OneDrive\\Desktop\\Workings\\Simulation_CSV_Files\\upsampled_Training_Data_Category_Distribution_Graph.pdf')
-ggsave('C:\\Users\\Ianm9\\OneDrive\\Desktop\\Workings\\Simulation_CSV_Files\\upsampled_Training_Data_Category_Distribution_Graph.png')
+ggsave('upsampled_Training_Data_Category_Distribution_Graph.pdf')
+ggsave('upsampled_Training_Data_Category_Distribution_Graph.png')
 
 # Post SMOTE Class Upsampling
 
@@ -119,7 +119,7 @@ rm(list=ls())
 library(purrr);  library(ggplot2); library(dplyr)
 library(plotly); library(tibble); library(scales)
 
-SMOTE_distribution_data = read.csv('C:\\Users\\Ianm9\\OneDrive\\Desktop\\Workings\\Class_Imbalance_Files\\SMOTE\\SMOTE_Training_Data.csv',
+SMOTE_distribution_data = read.csv('SMOTE_Training_Data.csv',
                                   header = T, fileEncoding = "UTF-8-BOM")
 attach(SMOTE_distribution_data);
 View(SMOTE_distribution_data);
@@ -167,7 +167,7 @@ SMOTE_dist_plot = ggplot(SMOTE_data_df, aes(x = Time,
              size=c(1.25, 1, 1))
 SMOTE_dist_plot
 
-ggsave('C:\\Users\\Ianm9\\OneDrive\\Desktop\\Workings\\Images\\SMOTE\\SMOTE_Training_Data_Category_Distribution_Graph.pdf')
-ggsave('C:\\Users\\Ianm9\\OneDrive\\Desktop\\Workings\\Images\\SMOTE\\SMOTE_Training_Data_Category_Distribution_Graph.png')
+ggsave('SMOTE_Training_Data_Category_Distribution_Graph.pdf')
+ggsave('SMOTE_Training_Data_Category_Distribution_Graph.png')
 
 
