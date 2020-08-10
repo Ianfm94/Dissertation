@@ -3,7 +3,7 @@ rm(list=ls())
 library(purrr);  library(ggplot2); library(dplyr)
 library(plotly); library(tibble); library(scales)
 
-airline_data = read.csv('C:\\Users\\Ianm9\\OneDrive\\Desktop\\Workings\\Simulation_CSV_Files\\Visualization_Files\\Airline_Data_Distribution.csv',
+airline_data = read.csv('Airline_Data_Distribution.csv',
                                  header = T, fileEncoding = "UTF-8-BOM")
 attach(airline_data);
 #View(airline_data);
@@ -51,5 +51,5 @@ airline_plot = ggplot(airline_df, aes(x = Time,
              size=c(1.25, 1, 1))
 airline_plot
 
-ggsave('C:\\Users\\Ianm9\\OneDrive\\Desktop\\Workings\\Simulation_Images\\Airline_Return_Distribution_Graph.png')
-ggsave('C:\\Users\\Ianm9\\OneDrive\\Desktop\\Workings\\Simulation_Images\\Airline_Return_Distribution_Graph.pdf')
+ggsave('Airline_Return_Distribution_Graph.png')
+ggsave('Airline_Return_Distribution_Graph.pdf')
